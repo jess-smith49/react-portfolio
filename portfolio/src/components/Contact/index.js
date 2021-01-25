@@ -45,20 +45,20 @@ function Contact(){
     return(
        <section>
            <h1>Contact Me Below!</h1>
-           <form id = "contact-form">
+           <form id = "contact-form" onSubmit={submitHandler}>
                 <div>
                     <label>What is your name?</label>
-                    <input type="text" name="name" />
+                    <input type="text" name="name" defaultValue={name}/>
                 </div>
 
                 <div>
                     <label>Enter Your Email Address</label>
-                    <input type="email" name="email" />
+                    <input type="email" name="email" defaultValue={email}/>
                 </div>
 
                 <div>
                     <label>Your Inquiry</label>
-                    <textarea name="message" rows="4" />
+                    <textarea name="message" rows="4" defaultValue={message} />
                 </div>
                 <button type="submit">Submit</button>
            </form>
